@@ -5,8 +5,6 @@ const loadQuotes = () => {
     .then(data => displayQuotes(data));
 };
 const displayQuotes = (quote) => {
-    const quoteContainer = document.getElementById('quotes-container');
-    const p = document.createElement('p');
-    p.innerText = quote.quote;
-    quoteContainer.appendChild(p);
+    const blockquote = document.getElementById('quote');
+    blockquote.innerText = quote.quote;
 };
