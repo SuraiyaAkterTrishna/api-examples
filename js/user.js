@@ -4,6 +4,7 @@ const loadUserFetch = () => {
   fetch(url)
     .then((res) => res.json())
     .then((data) => displayUser(data.results[0]))
+    // find error 
     .catch((error) => console.log(error));
 };
 // load user by async await
@@ -13,7 +14,9 @@ const loadUserAsync = async () => {
     const res = await fetch(url);
     const data = await res.json();
     displayUser(data.results[0]);
-  } catch (err) {
+  } 
+  // find error
+  catch (err) {
     console.log(err);
   }
 };
